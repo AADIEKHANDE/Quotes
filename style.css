@@ -82,15 +82,9 @@ body{
     cursor: pointer;
 }
 
-.b1:hover{
-    transform: translateY(5.5vh);
-    transition: 0.5s ease;
-    background: linear-gradient(to right,rgb(63, 133, 197),rgb(28, 185, 233));
-}
-
 .b1:active{
-    filter: brightness(10%);
-    transition: 1s ease;
+    background: linear-gradient(to right,rgb(63, 133, 197),rgb(28, 185, 233));
+    zoom: 95%;
 }
 
 #quote{
@@ -104,4 +98,13 @@ body{
     font-family: spartan;
     font-size: 14px;
     text-align: right;
+}
+
+.logo{
+    color: rgba(255, 255, 255, 0.466);
+    font-family: spartan;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transform: translateY(25vh);
+    text-align: center;
 }
