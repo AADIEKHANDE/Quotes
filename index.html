@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9 ">
     <title>Qoute</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +14,7 @@
         <div class="container">
             <p id="quote"></p>
             <p id="author"></p>
-            <button class="b1" onclick="newq()">Next</button>
+            <button class="b1" onclick="newq()">New</button>
             <p class="logo">@aditya_ekhande_</p>
         </div>
         
@@ -23,24 +23,40 @@
 </html>
 
 <script>
-    newq();
+    var qo = ["“The purpose of our lives is to be happy.”",
+        "“Life is what happens when you’re busy making other plans.”",
+        "“Get busy living or get busy dying.”",
+        "“You only live once, but if you do it right, once is enough.”",
+        "“Be yourself; everyone else is already taken.”",
+        "“Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.”",
+        "“You only live once, but if you do it right, once is enough.”",
+        "“Is it better to be feared or respected? I say, is it too much to ask for both?”",
+        "“In fact, the little details are by far the most important.”",
+        "“I believe we are here on the planet Earth to live, grow up and do what we can to make this world a better place for all people to enjoy freedom.”"
+    ];
+    var at = ["― Dalai Lama",
+        "― John",
+        "― Stephen King",
+        "― Mae West",
+        "― Oscar Wilde",
+        "― Bernard M. Baruch",
+        "― Mae West",
+        "― Tony Stark",
+        "― Sherlock Holmes",
+        "― Rosa Parks"
+];
+    var i=0;
     function newq()
     {
-        const Quote = document.getElementById('quote');
-        const Author = document.getElementById('author');
-
-        function newq()
-        {
-            fetch("http://quotes.stormconsultancy.co.uk/random.json")
-            .then((res)=>{
-                return res.json();
-            })
-            .then((data)=>{
-                Quote.innerText = data.quote;
-                Author.innerText = `-${data.author}`;
-            });
-        }
-        newq();
+       document.getElementById('quote').innerHTML=qo[i];
+       document.getElementById('author').innerHTML=at[i];
+       i++;
+       if(i>qo.length-1)
+       {
+           i=0;
+       }
     }
+
+    newq();
     
 </script>

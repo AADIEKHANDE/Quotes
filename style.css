@@ -29,7 +29,7 @@ body{
     left: 50%;
     transform: translate(40%,10%);
     box-shadow: 1px 1px 100px rgba(109, 165, 182, 0.37);
-    animation: c1 30s linear infinite;
+    animation: c1 20s linear infinite;
     transition: 1s ease-in-out;
 }
 .circle2{
@@ -42,7 +42,7 @@ body{
     left: 50%;
     transform: translate(-100%,-100%);
     box-shadow: 1px 1px 100px rgba(109, 165, 182, 0.37);
-    animation: c2 20s linear infinite;
+    animation: c2 15s linear infinite;
 }
 
 @keyframes c1{
@@ -73,12 +73,12 @@ body{
     font-family: Spartan;
     font-weight: bolder;
     background: linear-gradient(to right,rgb(28, 185, 233),rgb(63, 133, 197));
-    outline: none;
+    outline: none;    
     border: none;
     border-radius: 5px;
     padding: 15px;
     text-align: center;
-    transform: translateY(5vh);
+    transform: translateY(3vh);
     cursor: pointer;
 }
 
